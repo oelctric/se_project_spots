@@ -1,0 +1,30 @@
+.cards {
+  padding: 40px 0;
+  margin: 0 auto;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .cards__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View */
+@media (max-width: 630px) {
+  .cards {
+    padding: 20px 0;
+  }
+  .cards__list {
+    grid-template-columns: 1fr;
+  }
+}

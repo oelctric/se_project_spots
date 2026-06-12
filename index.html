@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,12 +18,155 @@
   </head>
   <body>
     <div class="page">
-      <header class="header"></header>
+      <header class="header">
+        <h1 class="header__title">Spots</h1>
+      </header>
       <main class="content">
-        <section class="profile"></section>
-        <section class="cards"></section>
+        <section class="profile">
+          <img
+            src="images/avatar.jpg"
+            alt="Omar's Avatar"
+            class="profile__avatar"
+          />
+          <div class="profile__info">
+            <div class="profile__title-container">
+              <h2 class="profile__name">Omar's Gallery</h2>
+              <button
+                class="profile__edit-button"
+                type="button"
+                aria-label="Edit Profile"
+              >
+                Edit Profile
+              </button>
+            </div>
+            <p class="profile__description">
+              Welcome to my collection of favorite spots. I'm a photographer who
+              loves capturing the essence of travel and architecture.
+            </p>
+          </div>
+        </section>
+        <section class="cards">
+          <ul class="cards__list">
+            <li class="card">
+              <img
+                src="images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="A breathtaking view of the mountains at sunrise."
+                class="card__img"
+              />
+              <div class="card__info">
+                <p class="card__caption">
+                  A breathtaking view of the mountains at sunrise.
+                </p>
+                <button
+                  class="card__like-button"
+                  type="button"
+                  aria-label="Like Spot"
+                >
+                  &#9825;
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="images/2-photo-by-ceiline-from-pexels.jpg"
+                alt="A serene beach with crystal clear waters."
+                class="card__img"
+              />
+              <div class="card__info">
+                <p class="card__caption">
+                  A serene beach with crystal clear waters.
+                </p>
+                <button
+                  class="card__like-button"
+                  type="button"
+                  aria-label="Like Spot"
+                >
+                  &#9825;
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+                alt="The bustling streets of a hidden city."
+                class="card__img"
+              />
+              <div class="card__info">
+                <p class="card__caption">
+                  The bustling streets of a hidden city.
+                </p>
+                <button
+                  class="card__like-button"
+                  type="button"
+                  aria-label="Like Spot"
+                >
+                  &#9825;
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="images/4-photo-by-maurice-laschet-from-pexels.jpg"
+                alt="An ancient temple standing tall against the sky."
+                class="card__img"
+              />
+              <div class="card__info">
+                <p class="card__caption">
+                  An ancient temple standing tall against the sky.
+                </p>
+                <button
+                  class="card__like-button"
+                  type="button"
+                  aria-label="Like Spot"
+                >
+                  &#9825;
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+                alt="The colorful architecture of a modern metropolis."
+                class="card__img"
+              />
+              <div class="card__info">
+                <p class="card__caption">
+                  The colorful architecture of a modern metropolis.
+                </p>
+                <button
+                  class="card__like-button"
+                  type="button"
+                  aria-label="Like Spot"
+                >
+                  &#9825;
+                </button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="A peaceful forest trail with dappled sunlight."
+                class="card__img"
+              />
+              <div class="card__info">
+                <p class="card__caption">
+                  A peaceful forest trail with dappled sunlight.
+                </p>
+                <button
+                  class="card__like-button"
+                  type="button"
+                  aria-label="Like Spot"
+                >
+                  &#9825;
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2026 Spots Gallery</p>
+      </footer>
     </div>
   </body>
 </html>
