@@ -17,4 +17,4 @@ _(Add your screenshots or GIFs here to showcase the project features)_
 
 ## Deployment
 
-- **GitHub Pages**: [Link to your deployed project]
+- **GitHub Pages**: [https://oelctric.github.io/se_project_spots/](https://oelctric.github.io/se_project_spots/)
