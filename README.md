@@ -13,7 +13,7 @@ Spots is a responsive photo-sharing profile page that showcases memorable places
 
 ## Project Pitch Video
 
-Check out [this video](ADD_LINK_HERE), where I describe my project and some challenges I faced while building it.
+Check out [this video](https://drive.google.com/file/d/1BgMNka0VXRD-SiUV9kujfSsvvypXv9_m/view?usp=sharing), where I describe my project and some challenges I faced while building it.
 
 ## Screenshots
 
