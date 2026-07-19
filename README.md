@@ -11,6 +11,10 @@ Spots is a responsive photo-sharing profile page that showcases memorable places
 - **Responsive Design**: Breakpoint-based styling to ensure a seamless experience across devices.
 - **Accessibility**: Proper alt tags and hover states for all interactive elements.
 
+## Project Pitch Video
+
+Check out [this video](ADD_LINK_HERE), where I describe my project and some challenges I faced while building it.
+
 ## Screenshots
 
 _(Add your screenshots or GIFs here to showcase the project features)_
