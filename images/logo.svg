@@ -1,3 +1,16 @@
-<svg width="94" height="26" viewBox="0 0 94 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <text x="0" y="20" font-family="'Poppins', 'Arial', sans-serif" font-weight="700" font-size="22" fill="#000000" letter-spacing="-0.5">Spots</text>
+<svg width="110" height="26" viewBox="0 0 110 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M8 2C8 2 3.5 3.5 2.5 6C2 7.5 8 14 8 14C8 14 14 7.5 13.5 6C12.5 3.5 8 2 8 2Z"
+    fill="#000000"
+  />
+  <circle cx="8" cy="19.5" r="2.2" fill="#000000" />
+  <text
+    x="20"
+    y="19"
+    font-family="'Poppins', 'Arial', sans-serif"
+    font-weight="700"
+    font-size="18"
+    letter-spacing="2"
+    fill="#000000"
+  >SPOTS</text>
 </svg>
