@@ -1,5 +1,4 @@
 .modal {
-  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,12 +9,13 @@
   justify-content: center;
   background-color: rgba(33, 33, 33, 0.6);
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.2s ease;
 }
 
 .modal_is-opened {
-  visibility: visible;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .modal__container {
@@ -84,7 +84,7 @@
   width: 100%;
   padding: 12px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
   color: #000000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;

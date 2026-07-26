@@ -17,9 +17,7 @@
 /* Tablet View */
 @media (max-width: 1320px) {
   .cards__list {
-    grid-template-columns: repeat(auto-fit, 413px);
     max-width: 900px;
-    margin: 0 auto;
   }
 }
 
