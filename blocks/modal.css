@@ -10,7 +10,7 @@
   justify-content: center;
   background-color: rgba(33, 33, 33, 0.6);
   opacity: 0;
-  transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+  transition: opacity 0.2s ease, visibility 0.2s linear;
 }
 
 .modal_is-opened {
@@ -22,7 +22,7 @@
 .modal__container {
   position: relative;
   width: 100%;
-  max-width: 430px;
+  max-width: 362px;
   box-sizing: border-box;
   padding: 40px;
   background-color: #ffffff;
