@@ -28,3 +28,77 @@ const initialCards = [
 initialCards.forEach((card) => {
   console.log(card.name);
 });
+
+// --- Modal functions ---
+
+function openModal(modalElement) {
+  modalElement.classList.add('modal_is-opened');
+}
+
+function closeModal(modalElement) {
+  modalElement.classList.remove('modal_is-opened');
+}
+
+// --- DOM elements ---
+
+const editProfileButton = document.querySelector('.profile__edit-button');
+const newPostButton = document.querySelector('.profile__new-post-button');
+const editProfileModal = document.getElementById('edit-profile-modal');
+const newPostModal = document.getElementById('new-post-modal');
+const profileNameElement = document.querySelector('.profile__name');
+const profileDescriptionElement = document.querySelector('.profile__description');
+const editProfileForm = document.querySelector('[name="edit-profile"]');
+const newPostForm = document.querySelector('[name="new-post"]');
+
+// --- Edit Profile Modal ---
+
+editProfileButton.addEventListener('click', () => {
+  const nameInput = editProfileForm.querySelector('[name="name"]');
+  const descriptionInput = editProfileForm.querySelector('[name="description"]');
+
+  nameInput.value = profileNameElement.textContent;
+  descriptionInput.value = profileDescriptionElement.textContent;
+
+  openModal(editProfileModal);
+});
+
+editProfileForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const nameInput = editProfileForm.querySelector('[name="name"]');
+  const descriptionInput = editProfileForm.querySelector('[name="description"]');
+
+  profileNameElement.textContent = nameInput.value;
+  profileDescriptionElement.textContent = descriptionInput.value;
+
+  closeModal(editProfileModal);
+});
+
+// --- New Post Modal ---
+
+newPostButton.addEventListener('click', () => {
+  openModal(newPostModal);
+});
+
+newPostForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const linkInput = newPostForm.querySelector('[name="link"]');
+  const captionInput = newPostForm.querySelector('[name="caption"]');
+
+  console.log({
+    link: linkInput.value,
+    caption: captionInput.value
+  });
+
+  closeModal(newPostModal);
+});
+
+// --- Close buttons ---
+
+document.querySelectorAll('.modal__close-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  });
+});
