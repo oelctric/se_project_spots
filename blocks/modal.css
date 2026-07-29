@@ -116,6 +116,28 @@
   opacity: 0.8;
 }
 
+.modal__container--preview {
+  max-width: 90vw;
+  padding: 40px;
+}
+
+.modal__preview-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.modal__preview-caption {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  max-width: 80vw;
+}
+
 @media (max-width: 630px) {
   .modal__container {
     max-width: calc(100% - 32px);
@@ -133,5 +155,19 @@
 
   .modal__save-button {
     width: 100%;
+  }
+
+  .modal__container--preview {
+    max-width: calc(100% - 32px);
+    padding: 24px;
+  }
+
+  .modal__preview-image {
+    max-width: calc(100vw - 48px);
+    max-height: 70vh;
+  }
+
+  .modal__preview-caption {
+    font-size: 16px;
   }
 }

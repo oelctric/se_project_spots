@@ -10,6 +10,7 @@
   object-fit: cover;
   border-radius: 8px;
   display: block;
+  cursor: pointer;
 }
 
 @media (max-width: 630px) {
@@ -72,5 +73,37 @@
   .card__like-icon {
     width: 20px;
     height: 18px;
+  }
+}
+
+.card__delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.card__delete-button:hover {
+  opacity: 1;
+}
+
+.card__delete-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 630px) {
+  .card__delete-icon {
+    width: 14px;
+    height: 14px;
   }
 }
