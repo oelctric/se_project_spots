@@ -11,6 +11,11 @@
   border-radius: 8px;
   display: block;
   cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.card__img:hover {
+  opacity: 0.9;
 }
 
 @media (max-width: 630px) {

@@ -112,6 +112,11 @@ editProfileButton.addEventListener('click', () => {
 editProfileForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
+  if (!editProfileForm.checkValidity()) {
+    editProfileForm.reportValidity();
+    return;
+  }
+
   const nameInput = editProfileForm.querySelector('[name="name"]');
   const descriptionInput = editProfileForm.querySelector('[name="description"]');
 
@@ -130,6 +135,11 @@ newPostButton.addEventListener('click', () => {
 newPostForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
+  if (!newPostForm.checkValidity()) {
+    newPostForm.reportValidity();
+    return;
+  }
+
   const linkInput = newPostForm.querySelector('[name="link"]');
   const captionInput = newPostForm.querySelector('[name="caption"]');
 
@@ -140,6 +150,8 @@ newPostForm.addEventListener('submit', (event) => {
 
   const cardElement = getCardElement(newCardData);
   cardsList.prepend(cardElement);
+
+  newPostForm.reset();
 
   closeModal(newPostModal);
 });
