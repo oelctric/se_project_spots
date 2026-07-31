@@ -75,15 +75,15 @@
   height: 20px;
 }
 
-.card__like-icon--like {
+.card__like-icon:nth-child(2) {
   display: none;
 }
 
-.card__like-button_is-liked .card__like-icon--unlike {
+.card__like-button_is-liked .card__like-icon:nth-child(1) {
   display: none;
 }
 
-.card__like-button_is-liked .card__like-icon--like {
+.card__like-button_is-liked .card__like-icon:nth-child(2) {
   display: block;
 }
 
