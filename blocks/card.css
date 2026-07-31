@@ -1,6 +1,7 @@
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .card__img {
@@ -74,6 +75,18 @@
   height: 20px;
 }
 
+.card__like-icon--active {
+  display: none;
+}
+
+.card__like-button_is-liked .card__like-icon {
+  display: none;
+}
+
+.card__like-button_is-liked .card__like-icon--active {
+  display: inline-block;
+}
+
 @media (max-width: 630px) {
   .card__like-icon {
     width: 20px;
@@ -86,6 +99,9 @@
   border: none;
   cursor: pointer;
   padding: 0;
+  position: absolute;
+  top: 12px;
+  right: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +110,6 @@
   opacity: 0.4;
   transition: opacity 0.2s ease;
   flex-shrink: 0;
-  margin-left: 8px;
 }
 
 .card__delete-button:hover {

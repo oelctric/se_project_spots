@@ -44,6 +44,8 @@ const editProfileForm = document.querySelector('[name="edit-profile"]');
 const newPostForm = document.querySelector('[name="new-post"]');
 const previewImage = previewModal.querySelector('.modal__preview-image');
 const previewCaption = previewModal.querySelector('.modal__preview-caption');
+const nameInput = editProfileForm.querySelector('[name="name"]');
+const descriptionInput = editProfileForm.querySelector('[name="description"]');
 
 // --- Modal functions ---
 
@@ -69,13 +71,7 @@ function getCardElement(data) {
   cardImage.alt = data.name;
 
   likeButton.addEventListener('click', () => {
-    const likeIcon = likeButton.querySelector('.card__like-icon');
     likeButton.classList.toggle('card__like-button_is-liked');
-    if (likeButton.classList.contains('card__like-button_is-liked')) {
-      likeIcon.style.filter = 'invert(26%) sepia(88%) saturate(7495%) hue-rotate(351deg) brightness(95%) contrast(98%)';
-    } else {
-      likeIcon.style.filter = '';
-    }
   });
 
   deleteButton.addEventListener('click', () => {
@@ -100,9 +96,6 @@ initialCards.forEach((cardData) => {
 // --- Edit Profile Modal ---
 
 editProfileButton.addEventListener('click', () => {
-  const nameInput = editProfileForm.querySelector('[name="name"]');
-  const descriptionInput = editProfileForm.querySelector('[name="description"]');
-
   nameInput.value = profileNameElement.textContent;
   descriptionInput.value = profileDescriptionElement.textContent;
 
@@ -116,9 +109,6 @@ editProfileForm.addEventListener('submit', (event) => {
     editProfileForm.reportValidity();
     return;
   }
-
-  const nameInput = editProfileForm.querySelector('[name="name"]');
-  const descriptionInput = editProfileForm.querySelector('[name="description"]');
 
   profileNameElement.textContent = nameInput.value;
   profileDescriptionElement.textContent = descriptionInput.value;
