@@ -75,6 +75,10 @@
   height: 20px;
 }
 
+.card__like-icon:last-child {
+  display: none;
+}
+
 .card__like-button_is-liked .card__like-icon:first-child {
   display: none;
 }
