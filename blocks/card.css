@@ -117,13 +117,25 @@
 }
 
 .card__delete-icon {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
+}
+
+.card__delete-icon--hover {
+  display: none;
+}
+
+.card__delete-button:hover .card__delete-icon:first-child {
+  display: none;
+}
+
+.card__delete-button:hover .card__delete-icon--hover {
+  display: block;
 }
 
 @media (max-width: 630px) {
   .card__delete-icon {
-    width: 14px;
-    height: 14px;
+    width: 32px;
+    height: 32px;
   }
 }

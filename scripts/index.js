@@ -43,7 +43,8 @@ const profileDescriptionElement = document.querySelector('.profile__description'
 const editProfileForm = document.querySelector('[name="edit-profile"]');
 const newPostForm = document.querySelector('[name="new-post"]');
 const previewImage = previewModal.querySelector('.modal__preview-image');
-const previewCaption = previewModal.querySelector('.modal__preview-caption');
+const previewTitle = previewModal.querySelector('.modal__preview-title');
+const previewContainer = previewModal.querySelector('.modal__container');
 const nameInput = editProfileForm.querySelector('[name="name"]');
 const descriptionInput = editProfileForm.querySelector('[name="description"]');
 
@@ -81,8 +82,22 @@ function getCardElement(data) {
   cardImage.addEventListener('click', () => {
     previewImage.src = data.link;
     previewImage.alt = data.name;
-    previewCaption.textContent = data.name;
-    openModal(previewModal);
+    previewTitle.textContent = data.name;
+
+    const img = new Image();
+    img.onload = () => {
+      const isHorizontal = img.naturalWidth > img.naturalHeight;
+      if (isHorizontal) {
+        previewContainer.classList.add('modal__container--horizontal');
+      } else {
+        previewContainer.classList.remove('modal__container--horizontal');
+      }
+      openModal(previewModal);
+    };
+    img.onerror = () => {
+      openModal(previewModal);
+    };
+    img.src = data.link;
   });
 
   return cardElement;
