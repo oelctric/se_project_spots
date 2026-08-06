@@ -119,6 +119,7 @@
 .card__delete-icon {
   width: 32px;
   height: 32px;
+  display: block;
 }
 
 .card__delete-icon_hover {
