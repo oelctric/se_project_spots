@@ -121,7 +121,7 @@
   height: 32px;
 }
 
-.card__delete-icon--hover {
+.card__delete-icon_hover {
   display: none;
 }
 
@@ -129,7 +129,7 @@
   display: none;
 }
 
-.card__delete-button:hover .card__delete-icon--hover {
+.card__delete-button:hover .card__delete-icon_hover {
   display: block;
 }
 
