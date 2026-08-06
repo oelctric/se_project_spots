@@ -41,7 +41,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.4;
   transition: opacity 0.2s ease;
 }
 
@@ -156,11 +156,6 @@
   background: none;
   border: none;
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
-}
-
-.modal__container--preview .modal__close-button:hover {
   opacity: 1;
 }
 
@@ -206,6 +201,72 @@
   letter-spacing: 0;
 }
 
+/* Below 1440px the preview modal's container is narrower than the fixed-canvas
+   offsets below assume. Values here (16px margins, 8px gaps, 41px button
+   offset) are read directly from the "Spots App Mobile / Image popup" Figma
+   frames (both the portrait and landscape source-image variants show the
+   same pattern: image inset 16px each side, close button flush with the
+   image's own right edge with an 8px gap above it, caption flush with the
+   image's left edge with an 8px gap below it). */
+@media (max-width: 1439px) {
+  .modal__container.modal__container--preview {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 89px;
+    padding-bottom: 24px;
+  }
+
+  .modal__preview-image {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 446px;
+    height: auto;
+    max-height: 60vh;
+  }
+
+  .modal__container--horizontal .modal__preview-image {
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: none;
+    height: auto;
+  }
+
+  /* Close button's right edge is flush with the image's right edge, so its
+     "right" offset must equal the image's own inset from the container edge. */
+  .modal__container--preview .modal__close-button {
+    top: 41px;
+    right: calc((100% - min(100% - 32px, 446px)) / 2);
+    left: auto;
+  }
+
+  .modal__container--horizontal .modal__close-button {
+    right: 16px;
+  }
+
+  /* Caption sits left-aligned under the image's left edge, sharing the
+     image's own box exactly (not centered on the page). */
+  .modal__preview-caption {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 446px;
+    margin-top: 8px;
+  }
+
+  .modal__container--horizontal .modal__preview-caption {
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: none;
+  }
+}
+
 @media (max-width: 630px) {
   .modal__container {
     max-width: calc(100% - 32px);
@@ -220,13 +281,6 @@
     width: 100%;
   }
 
-  .modal__container--preview {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 40px;
-    padding-bottom: 24px;
-  }
-
   .modal__close-button {
     top: 24px;
     right: 24px;
@@ -238,36 +292,6 @@
   .modal__close-icon {
     width: 16px;
     height: 16px;
-  }
-
-  .modal__preview-image {
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 446px;
-    height: auto;
-    max-height: 60vh;
-  }
-
-  .modal__container--horizontal .modal__preview-image {
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: calc(100% - 48px);
-  }
-
-  .modal__container--horizontal .modal__preview-caption {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .modal__preview-caption {
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 16px;
   }
 
   .modal__preview-title {
