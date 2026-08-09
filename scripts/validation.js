@@ -1,3 +1,12 @@
+const validationConfig = {
+  formSelector: '.modal__form',
+  inputSelector: '.modal__input',
+  submitButtonSelector: '.modal__save-button',
+  inactiveButtonClass: 'modal__save-button_disabled',
+  inputErrorClass: 'modal__input_type_error',
+  errorClass: 'modal__error_visible'
+};
+
 function showInputError(formElement, inputElement, config) {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
   inputElement.classList.add(config.inputErrorClass);
@@ -65,3 +74,5 @@ function resetValidation(formElement, config) {
 
   toggleButtonState(inputList, buttonElement, config);
 }
+
+enableValidation(validationConfig);

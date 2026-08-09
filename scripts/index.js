@@ -29,17 +29,6 @@ const initialCards = [
   }
 ];
 
-// --- Validation configuration ---
-
-const validationConfig = {
-  formSelector: '.modal__form',
-  inputSelector: '.modal__input',
-  submitButtonSelector: '.modal__save-button',
-  inactiveButtonClass: 'modal__save-button_disabled',
-  inputErrorClass: 'modal__input_type_error',
-  errorClass: 'modal__error_visible'
-};
-
 // --- DOM elements ---
 
 const cardsList = document.querySelector('.cards__list');
@@ -61,7 +50,7 @@ const descriptionInput = editProfileForm.querySelector('[name="description"]');
 
 // --- Modal functions ---
 
-function handleEscapeKeydown(event) {
+function closeOnEscape(event) {
   if (event.key === 'Escape') {
     const openedModal = document.querySelector('.modal_is-opened');
     closeModal(openedModal);
@@ -70,15 +59,13 @@ function handleEscapeKeydown(event) {
 
 function openModal(modalElement) {
   modalElement.classList.add('modal_is-opened');
-  document.addEventListener('keydown', handleEscapeKeydown);
+  document.addEventListener('keydown', closeOnEscape);
 }
 
 function closeModal(modalElement) {
   modalElement.classList.remove('modal_is-opened');
-  document.removeEventListener('keydown', handleEscapeKeydown);
+  document.removeEventListener('keydown', closeOnEscape);
 }
-
-enableValidation(validationConfig);
 
 document.querySelectorAll('.modal').forEach((modalElement) => {
   modalElement.addEventListener('mousedown', (event) => {
