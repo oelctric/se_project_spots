@@ -159,8 +159,8 @@
 }
 
 .modal__container--confirm .modal__close-icon {
-  width: 16px;
-  height: 16px;
+  width: 40px;
+  height: 40px;
 }
 
 .modal__container--confirm .modal__title {
