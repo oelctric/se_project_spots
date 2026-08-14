@@ -165,7 +165,9 @@
 
 .modal__container--confirm .modal__title {
   margin-bottom: 32px;
-  padding-right: 20px;
+  padding-right: 0;
+  text-align: center;
+  color: #212121;
 }
 
 .modal__form--confirm {
