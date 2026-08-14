@@ -32,13 +32,14 @@
             <button
               class="profile__avatar-edit-button"
               type="button"
-              aria-label="Change profile picture"
+              aria-label="Edit avatar"
             >
               <img
                 src="images/pencil.svg"
                 alt=""
                 class="profile__avatar-edit-icon"
               />
+              <span class="profile__avatar-edit-label">Edit Avatar</span>
             </button>
           </div>
           <div class="profile__info">
@@ -185,9 +186,10 @@
           >
             <img src="images/close.svg" alt="" class="modal__close-icon" />
           </button>
-          <h2 class="modal__title">Are you sure?</h2>
-          <form class="modal__form" name="delete-confirm" novalidate>
-            <button type="submit" class="modal__save-button">Yes</button>
+          <h2 class="modal__title">Are you sure you want to delete this image?</h2>
+          <form class="modal__form modal__form--confirm" name="delete-confirm" novalidate>
+            <button type="submit" class="modal__save-button modal__save-button_danger">Delete</button>
+            <button type="button" class="modal__cancel-button">Cancel</button>
           </form>
         </div>
       </div>
@@ -200,16 +202,16 @@
           >
             <img src="images/close.svg" alt="" class="modal__close-icon" />
           </button>
-          <h2 class="modal__title">Change profile picture</h2>
+          <h2 class="modal__title">Edit profile avatar</h2>
           <form class="modal__form" name="edit-avatar" novalidate>
             <label class="modal__field">
-              <span class="modal__label">Image link</span>
+              <span class="modal__label">Profile Picture</span>
               <input
                 type="url"
                 name="avatar"
                 id="avatar-input"
                 class="modal__input"
-                placeholder="Paste a link to the picture"
+                placeholder="Paste the link to an image"
                 required
               />
               <span class="modal__error" id="avatar-input-error"></span>

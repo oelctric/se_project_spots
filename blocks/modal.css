@@ -145,6 +145,50 @@
   opacity: 0.5;
 }
 
+.modal__form--confirm {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.modal__form--confirm .modal__save-button,
+.modal__form--confirm .modal__cancel-button {
+  width: 156px;
+  padding: 18px 32px;
+}
+
+.modal__save-button_danger {
+  background-color: #ff6565;
+  color: #ffffff;
+}
+
+.modal__cancel-button {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #212121;
+  border: 1px solid #212121;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.modal__cancel-button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 630px) {
+  .modal__form--confirm {
+    flex-direction: column;
+  }
+
+  .modal__form--confirm .modal__save-button,
+  .modal__form--confirm .modal__cancel-button {
+    width: 100%;
+  }
+}
+
 .modal__container.modal__container--preview {
   position: fixed;
   top: 50%;

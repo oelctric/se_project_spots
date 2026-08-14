@@ -24,6 +24,7 @@ const profileDescriptionElement = document.querySelector('.profile__description'
 const editProfileForm = document.querySelector('[name="edit-profile"]');
 const newPostForm = document.querySelector('[name="new-post"]');
 const deleteConfirmForm = document.querySelector('[name="delete-confirm"]');
+const deleteCancelButton = deleteConfirmForm.querySelector('.modal__cancel-button');
 const editAvatarForm = document.querySelector('[name="edit-avatar"]');
 const previewImage = previewModal.querySelector('.modal__preview-image');
 const previewTitle = previewModal.querySelector('.modal__preview-title');
@@ -222,6 +223,10 @@ newPostForm.addEventListener('submit', (event) => {
 });
 
 // --- Delete Confirmation Modal ---
+
+deleteCancelButton.addEventListener('click', () => {
+  closeModal(deleteConfirmModal);
+});
 
 deleteConfirmForm.addEventListener('submit', (event) => {
   event.preventDefault();
