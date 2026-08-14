@@ -172,6 +172,7 @@
 
 .modal__form--confirm {
   flex-direction: row;
+  justify-content: center;
   gap: 20px;
 }
 
