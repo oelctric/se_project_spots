@@ -1,3 +1,7 @@
+import '../pages/index.css';
+import Api from '../utils/Api.js';
+import { validationConfig, enableValidation, resetValidation } from './validation.js';
+
 const api = new Api({
   baseUrl: 'https://around-api.en.tripleten-services.com/v1',
   headers: {
@@ -35,6 +39,8 @@ const avatarInput = editAvatarForm.querySelector('[name="avatar"]');
 
 let selectedCardElement = null;
 let selectedCardId = null;
+
+enableValidation(validationConfig);
 
 // --- Modal functions ---
 
