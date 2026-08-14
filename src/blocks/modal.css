@@ -145,6 +145,76 @@
   opacity: 0.5;
 }
 
+.modal__container--confirm {
+  max-width: 630px;
+  padding: 32px 20px;
+}
+
+.modal__container--confirm .modal__close-button {
+  top: 0;
+  right: -52px;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
+
+.modal__container--confirm .modal__close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.modal__container--confirm .modal__title {
+  margin-bottom: 32px;
+  padding-right: 0;
+  text-align: center;
+  color: #212121;
+}
+
+.modal__form--confirm {
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal__form--confirm .modal__save-button,
+.modal__form--confirm .modal__cancel-button {
+  width: 156px;
+  padding: 18px 32px;
+}
+
+.modal__save-button_danger {
+  background-color: #ff6565;
+  color: #ffffff;
+}
+
+.modal__cancel-button {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #212121;
+  border: 1px solid #212121;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.modal__cancel-button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 630px) {
+  .modal__form--confirm {
+    flex-direction: column;
+  }
+
+  .modal__form--confirm .modal__save-button,
+  .modal__form--confirm .modal__cancel-button {
+    width: 100%;
+  }
+}
+
 .modal__container.modal__container--preview {
   position: fixed;
   top: 50%;

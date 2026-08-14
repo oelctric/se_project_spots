@@ -14,7 +14,6 @@
       content="Spots, profile page, photo gallery, responsive design, HTML, CSS"
     />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
     <div class="page">
@@ -23,11 +22,25 @@
       </header>
       <main class="content">
         <section class="profile">
-          <img
-            src="images/avatar.jpg"
-            alt="Omar's Avatar"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-wrapper">
+            <img
+              src="images/avatar.jpg"
+              alt="Omar's Avatar"
+              class="profile__avatar"
+            />
+            <button
+              class="profile__avatar-edit-button"
+              type="button"
+              aria-label="Edit avatar"
+            >
+              <img
+                src="images/pencil.svg"
+                alt=""
+                class="profile__avatar-edit-icon"
+              />
+              <span class="profile__avatar-edit-label">Edit Avatar</span>
+            </button>
+          </div>
           <div class="profile__info">
             <h1 class="profile__name">Omar's Gallery</h1>
             <p class="profile__description">
@@ -163,6 +176,49 @@
           </form>
         </div>
       </div>
+      <div class="modal" id="delete-confirm-modal">
+        <div class="modal__container modal__container--confirm">
+          <button
+            class="modal__close-button"
+            type="button"
+            aria-label="Close"
+          >
+            <img src="images/close-white.svg" alt="" class="modal__close-icon" />
+          </button>
+          <h2 class="modal__title">Are you sure you want to delete this image?</h2>
+          <form class="modal__form modal__form--confirm" name="delete-confirm" novalidate>
+            <button type="submit" class="modal__save-button modal__save-button_danger">Delete</button>
+            <button type="button" class="modal__cancel-button">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="edit-avatar-modal">
+        <div class="modal__container">
+          <button
+            class="modal__close-button"
+            type="button"
+            aria-label="Close"
+          >
+            <img src="images/close.svg" alt="" class="modal__close-icon" />
+          </button>
+          <h2 class="modal__title">Edit profile avatar</h2>
+          <form class="modal__form" name="edit-avatar" novalidate>
+            <label class="modal__field">
+              <span class="modal__label">Profile Picture</span>
+              <input
+                type="url"
+                name="avatar"
+                id="avatar-input"
+                class="modal__input"
+                placeholder="Paste the link to an image"
+                required
+              />
+              <span class="modal__error" id="avatar-input-error"></span>
+            </label>
+            <button type="submit" class="modal__save-button">Save</button>
+          </form>
+        </div>
+      </div>
       <div class="modal" id="preview-modal">
         <div class="modal__container modal__container--preview">
           <img src="#" alt="" class="modal__preview-image" />
@@ -179,7 +235,5 @@
         </div>
       </div>
     </div>
-    <script defer src="./scripts/validation.js"></script>
-    <script defer src="./scripts/index.js"></script>
   </body>
 </html>
